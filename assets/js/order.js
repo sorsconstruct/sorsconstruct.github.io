@@ -1,5 +1,7 @@
-$('.btn-buy').submit(function () {
-    // $('#contact-form1').validate();
+
+$( ".btn-buy" ).on( "click", function() {
+  // console.log( $( this ).text() );
+  // $('#contact-form1').validate();
 
     //if (validate()) {
         sendFormData();
@@ -13,4 +15,8 @@ $('.btn-buy').submit(function () {
     //}
 
     return false;
+
 });
+
+
+ 
