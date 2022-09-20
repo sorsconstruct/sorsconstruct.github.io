@@ -176,6 +176,11 @@ $('#contact-form').submit(function () {
 
     //if (validate()) {
         sendFormData();
+
+        // <a href="mailto:[email protected]?subject=Testing out mailto!&body=This is only a test!">Second Example</a>
+
+        window.href = 'mailto:sorset@qq.com?subject=Order Request Vibration Isolator!&body=Company/Personal Name:..... Vibration Isolator Counts:..... Address:..... Phone:.....';
+
     //}
     //else {
     //    messageSendError("Warning! Please validate captcha before send new message.");
