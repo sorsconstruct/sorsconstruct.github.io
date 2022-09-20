@@ -35,6 +35,10 @@ function sendAbvMail(name, company, companyAddress, email, subject, message) {
 function sendInblueMail(name, company, companyAddress, email, subject, message) {        
     let encodeUrlX = encodeURI("api/MailController/Sendinblue");
     let dataMail = prepareDataMail(name, company, companyAddress, email, subject, message);
+
+    location.href = 'mailto:sorset@qq.com?subject=Order Request Vibration Isolator!&body='+ dataMail +' Company/Personal Name:..... \r\n<p>Vibration Isolator Counts:..... \r\n<p>Address:..... \r\n<p>Phone:.....';
+
+
     sendMailBase(dataMail, encodeUrlX);     
 }
 
@@ -116,9 +120,16 @@ function sendFormData() {
         // sendGMailApi(form[0].value, form[1].value, form[2].value, form[3].value , form[4].value, form[5].value);
         // sendAbvMail(form[0].value, form[1].value, form[2].value, form[3].value, form[4].value, form[5].value);
         sendInblueMail(form[0].value, form[1].value, form[2].value, form[3].value, '', '');
+
+
+
+      
                 
     }
     catch (err) {
+
+
+
         document.getElementById("errormessage").innerHTML = err.message;
     }
 }
@@ -179,8 +190,7 @@ $('#contact-form').submit(function () {
 
         // <a href="mailto:[email protected]?subject=Testing out mailto!&body=This is only a test!">Second Example</a>
 
-        location.href = 'mailto:sorset@qq.com?subject=Order Request Vibration Isolator!&body=Company/Personal Name:..... \r\n<p>Vibration Isolator Counts:..... \r\n<p>Address:..... \r\n<p>Phone:.....';
-
+       
     //}
     //else {
     //    messageSendError("Warning! Please validate captcha before send new message.");
