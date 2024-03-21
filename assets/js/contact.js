@@ -36,7 +36,7 @@ function sendInblueMail(name, company, companyAddress, email, subject, message) 
     let encodeUrlX = encodeURI("api/MailController/Sendinblue");
     let dataMail = prepareDataMail(name, company, companyAddress, email, subject, message);
 
-    location.href = 'mailto:sorset@qq.com?subject=Order Request Vibration Isolator!&body='+ dataMail +' Company/Personal Name:..... \r\n<p>Vibration Isolator Counts:..... \r\n<p>Address:..... \r\n<p>Phone:.....';
+    location.href = 'mailto:pz.ibm@abv.bg?subject=Order Request Vibration Isolator!&body='+ dataMail +' Company/Personal Name:..... \r\n<p>Vibration Isolator Counts:..... \r\n<p>Address:..... \r\n<p>Phone:.....';
 
 
     sendMailBase(dataMail, encodeUrlX);     
