@@ -2,7 +2,7 @@
 $(".btn-buy").on("click", function () {
 
   $('html, body').animate({
-    scrollTop: $('#footer').offset().top  + 800
+    scrollTop: $('#contact').offset().top  + 800
   }, 600);
 
 
