@@ -17,33 +17,42 @@ function replaceAll(str, map) {
 function sendGMail(name, company, companyAddress, email, subject, message) {
     let encodeUrlX = encodeURI("api/MailController/GMail");
     let dataMail = prepareDataMail(name, company, companyAddress, email, subject, message);
-    sendMailBase(dataMail, encodeUrlX);   
+    sendMailBase(dataMail, encodeUrlX);
 }
 
 function sendGMailApi(name, company, companyAddress, email, subject, message) {
     let encodeUrlX = encodeURI("api/MailController/GMailApi");
     let dataMail = prepareDataMail(name, company, companyAddress, email, subject, message);
-    sendMailBase(dataMail, encodeUrlX);    
+    sendMailBase(dataMail, encodeUrlX);
 }
 
-function sendAbvMail(name, company, companyAddress, email, subject, message) {        
+function sendAbvMail(name, company, companyAddress, email, subject, message) {
     let encodeUrlX = encodeURI("api/MailController/AbvMail");
     let dataMail = prepareDataMail(name, company, companyAddress, email, subject, message);
-    sendMailBase(dataMail, encodeUrlX);     
+    sendMailBase(dataMail, encodeUrlX);
 }
 
-function sendInblueMail(name, company, companyAddress, email, subject, message) {        
+function sendInblueMail(name, company, companyAddress, email, subject, message) {
     let encodeUrlX = encodeURI("api/MailController/Sendinblue");
     let dataMail = prepareDataMail(name, company, companyAddress, email, subject, message);
 
-    location.href = 'mailto:pz.ibm@abv.bg?subject=Order Request Vibration Isolator!&body='+ dataMail +' Company/Personal Name:..... \r\n<p>Vibration Isolator Counts:..... \r\n<p>Address:..... \r\n<p>Phone:.....';
+    // location.href = 'mailto:pz.ibm@abv.bg?subject=Order Request Vibration Isolator!&body=' + dataMail + ' Company/Personal Name:..... \r\n<p>Vibration Isolator Counts:..... \r\n<p>Address:..... \r\n<p>Phone:.....';
 
+   
 
-    sendMailBase(dataMail, encodeUrlX);     
+    // sendMailBase(dataMail, encodeUrlX);
 }
 
-function sendMailBase(dataMail, encodeUrlX) {        
-    
+
+function sendInblueMail2(name, company, companyAddress, email, subject, message) {
+    let encodeUrlX = encodeURI("api/MailController/Sendinblue");
+    let dataMail = prepareDataMail(name, company, companyAddress, email, subject, message);
+     
+    sendMailBase(dataMail, encodeUrlX);
+}
+
+function sendMailBase(dataMail, encodeUrlX) {
+
     $.ajax({
         url: encodeUrlX,
         type: "POST",
@@ -61,6 +70,8 @@ function sendMailBase(dataMail, encodeUrlX) {
         },
         error: function (xhRequest, ErrorText, thrownError) {
             messageSendError("Message failed");
+            location.href = 'mailto:pz.ibm@abv.bg?subject=Order Request&body=' + dataMail + '\r\n<p> Company/Personal Name:..... \r\n<p>Counts:..... \r\n<p>Address:..... \r\n<p>Phone:.....';
+
             // alert("Failed to process correctly, please try again");
         },
         complete: function () {
@@ -91,21 +102,21 @@ function prepareDataMail(name, company, companyAddress, email, subject, message)
     subject = replaceAll(subject, map);
     message = replaceAll(message, map);
 
-    let nameData =  name;
+    let nameData = name;
     let emailData = email;
     let subjectData = subject;
     let companyData = company;
     let companyAddressData = companyAddress;
     let messageData = message;
-       
+
     let dataMail = JSON.stringify({
-            "name": nameData,
-            "email": emailData,
-            "subject": subjectData,
-            "message": messageData,
-            "company": companyData,
-            "address": companyAddressData
-        });
+        "name": nameData,
+        "email": emailData,
+        "subject": subjectData,
+        "message": messageData,
+        "company": companyData,
+        "address": companyAddressData
+    });
 
     return dataMail;
 }
@@ -116,15 +127,18 @@ function sendFormData() {
         messageSendReset();
         var form = document.getElementById('contact-form');
 
+
+        
+
         // sendGMail(form[0].value, form[1].value, form[2].value, form[3].value, form[4].value, form[5].value);
         // sendGMailApi(form[0].value, form[1].value, form[2].value, form[3].value , form[4].value, form[5].value);
         // sendAbvMail(form[0].value, form[1].value, form[2].value, form[3].value, form[4].value, form[5].value);
-        sendInblueMail(form[0].value, form[1].value, form[2].value, form[3].value, '', '');
+        sendInblueMail2(form[0].value, form[1].value, form[2].value, form[3].value, '', '');
 
 
 
-      
-                
+
+
     }
     catch (err) {
 
@@ -183,14 +197,18 @@ function messageSendError(error) {
 }
 
 $('#contact-form').submit(function () {
+    // e.preventDefault();
+
+   
+    
     // $('#contact-form1').validate();
 
     //if (validate()) {
-        sendFormData();
+    sendFormData();
 
-        // <a href="mailto:[email protected]?subject=Testing out mailto!&body=This is only a test!">Second Example</a>
+    // <a href="mailto:[email protected]?subject=Testing out mailto!&body=This is only a test!">Second Example</a>
 
-       
+
     //}
     //else {
     //    messageSendError("Warning! Please validate captcha before send new message.");
