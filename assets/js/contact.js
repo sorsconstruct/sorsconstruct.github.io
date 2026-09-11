@@ -85,7 +85,7 @@ function sendMailBase(dataMail, encodeUrlX) {
 function submitLog(name, company, companyAddress, email, subject, message) {
 
 	const payload = {
-		name: 'Name: ' + encodeURIComponent(name) + '. Company name: ' + encodeURIComponent(company) + ' Title: ' + subject + ' Message: ' + message,
+		name: encodeURIComponent(name) + '. Company: ' + encodeURIComponent(company) + ' Title: ' + encodeURIComponent( subject) + ' Message: ' + encodeURIComponent(message),
 		address: encodeURIComponent(companyAddress),
 		book_count: 0,
 		payment_type: '',
