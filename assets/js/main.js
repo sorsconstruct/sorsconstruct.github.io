@@ -224,8 +224,5 @@
 			mirror: false
 		})
 	});
-
-
-	logSave("Sors construct was load.");
-
+	
 })()
