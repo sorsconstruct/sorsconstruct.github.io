@@ -89,7 +89,7 @@ function submitLog(name, company, companyAddress, email, subject, message) {
 		address: encodeURIComponent(companyAddress),
 		book_count: 0,
 		payment_type: '',
-		lang: '',
+		lang: encodeURIComponent(email),
 		ts: new Date().toISOString(),
 	};
 
