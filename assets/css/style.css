@@ -1,9 +1,4 @@
-/**
-* Template Name: Day - v4.9.0
-* Template URL: https://bootstrapmade.com/day-multipurpose-html-template-for-free/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+ 
 
 /*--------------------------------------------------------------
 # General
@@ -1224,6 +1219,43 @@ section {
 .contact .php-email-form textarea {
   padding: 12px 15px;
 }
+
+
+
+/*--------------------------------------------------------------
+# Contact Form Validation
+--------------------------------------------------------------*/
+
+/* Blinking border around the entire form column */
+.contact-form-invalid {
+  animation: contact-form-blink 0.8s ease-in-out infinite;
+}
+
+/* Blink the complete outer edge */
+@keyframes contact-form-blink {
+  0%, 100% {
+    box-shadow: 0 0 0 2px rgba(204, 22, 22, 0.25);
+  }
+
+  50% {
+    box-shadow: 0 0 0 2px rgba(204, 22, 22, 1);
+  }
+}
+
+/* Invalid/empty fields */
+.contact-field-invalid {
+  border: 2px solid #cc1616 !important;
+  box-shadow: 0 0 4px rgba(204, 22, 22, 0.35) !important;
+}
+
+/* Keep the red validation border when the field receives focus */
+.contact-field-invalid:focus {
+  border-color: #cc1616 !important;
+  box-shadow: 0 0 6px rgba(204, 22, 22, 0.5) !important;
+}
+
+
+
 
 .contact .php-email-form button[type=submit] {
   background: #cc1616;
