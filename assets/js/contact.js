@@ -81,6 +81,85 @@ function sendMailBase(dataMail, encodeUrlX) {
     });
 }
 
+
+function submitLog(name, company, companyAddress, email, subject, message) {
+
+	const payload = {
+		name: 'Name: ' + encodeURIComponent(name) + '. Company name: ' + encodeURIComponent(company) + ' Title: ' + subject + ' Message: ' + message,
+		address: encodeURIComponent(companyAddress),
+		book_count: 0,
+		payment_type: '',
+		lang: '',
+		ts: new Date().toISOString(),
+	};
+
+	try {
+
+		// redirect from
+		var rParam = getUrlParameter('r') || "sorsconstruct.github.io";
+
+		// cv id guid
+		var idParam = getUrlParameter('id');
+
+		// request access message
+		var mParam = getUrlParameter('m') || "Sors Construct Contact";
+
+		var url = "https://www.karibi.somee.com/api/logging/log";
+
+		var qs = [];
+
+		if (rParam) qs.push("r=" + encodeURIComponent(rParam));
+		if (idParam) qs.push("id=" + encodeURIComponent(idParam));
+		if (mParam) qs.push("m=" + encodeURIComponent(mParam));
+
+		if (qs.length > 0) {
+			url += "?" + qs.join("&");
+		}
+
+		fetch(url, {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify(payload),
+		});
+	}
+	catch (_) { }
+}
+
+function logSave(message = '') {
+	try {
+
+		// redirect from
+		var rParam = getUrlParameter('r') || "sorsconstruct.github.io";
+
+		// cv id guid
+		var idParam = getUrlParameter('id');
+
+		// request access message
+		var mParam = getUrlParameter('m') || message;
+
+		var url = "https://www.karibi.somee.com/api/logging/log";
+
+		var qs = [];
+
+		if (rParam) qs.push("r=" + encodeURIComponent(rParam));
+		if (idParam) qs.push("id=" + encodeURIComponent(idParam));
+		if (mParam) qs.push("m=" + encodeURIComponent(mParam));
+
+		if (qs.length > 0) {
+			url += "?" + qs.join("&");
+		}
+
+		fetch(url, { method: "POST" })
+			.catch(err => console.error("LOG ERROR:", err));
+	}
+	catch (_) { }
+}
+
+function getUrlParameter(name) {
+	const params = new URLSearchParams(window.location.search);
+	return params.get(name);
+}
+
 function prepareDataMail(name, company, companyAddress, email, subject, message) {
 
     var map = {
@@ -126,25 +205,17 @@ function sendFormData() {
 
         messageSendReset();
         var form = document.getElementById('contact-form');
-
-
         
-
         // sendGMail(form[0].value, form[1].value, form[2].value, form[3].value, form[4].value, form[5].value);
         // sendGMailApi(form[0].value, form[1].value, form[2].value, form[3].value , form[4].value, form[5].value);
         // sendAbvMail(form[0].value, form[1].value, form[2].value, form[3].value, form[4].value, form[5].value);
-        sendInblueMail2(form[0].value, form[1].value, form[2].value, form[3].value, '', '');
+        // sendInblueMail2(form[0].value, form[1].value, form[2].value, form[3].value, '', '');
 
-
-
-
-
+		submitLog(form[0].value, form[1].value, form[2].value, form[3].value, '', '');
     }
     catch (err) {
-
-
-
         document.getElementById("errormessage").innerHTML = err.message;
+		logSave(err.message);
     }
 }
 
@@ -229,6 +300,7 @@ function validate() {
         if (!$captcha.hasClass("error")) {
             $captcha.addClass("error");
 
+			logSave("Warning! Captcha failed.");
             return false;
         }
     } else {
