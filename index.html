@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sors Construction — Vibration Isolation & Smart Security, Made in EU</title>
+<meta name="description" content="Sors Construction — European manufacturer of HVAC vibration isolators and the Sors R1 Smart Door Lock. 12,000+ units delivered to 850+ business clients across 40+ countries.">
+<meta name="keywords" content="Sors Construction, vibration isolator, HVAC, smart door lock, Sors R1, manufacturing, Made in EU">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+/* ============================================================
+   SORS CONSTRUCTION — Modern Redesign
+   ============================================================ */
+:root{
+  --red:#cc1616;
+  --red-2:#e82d2d;
+  --red-soft:rgba(204,22,22,.12);
+  --ink:#101014;
+  --ink-2:#191919;
+  --paper:#f7f7f9;
+  --line:rgba(16,16,20,.08);
+  --grad:linear-gradient(135deg,#cc1616 0%,#7a0d2e 55%,#2a0a14 100%);
+  --shadow:0 20px 60px rgba(16,16,20,.12);
+  --radius:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Open Sans",sans-serif;color:#444;background:#fff;overflow-x:hidden}
+h1,h2,h3,h4,h5,h6{font-family:"Raleway",sans-serif}
+a{color:var(--red);text-decoration:none}
+img{max-width:100%;display:block}
+
+/* ---------- Scroll progress ---------- */
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--grad);z-index:1200;transition:width .08s linear}
+
+/* ---------- Reveal on scroll ---------- */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s cubic-bezier(.22,.61,.36,1),transform .8s cubic-bezier(.22,.61,.36,1)}
+.reveal.revealed{opacity:1;transform:none}
+.reveal-left{transform:translateX(-46px)}
+.reveal-right{transform:translateX(46px)}
+.reveal-left.revealed,.reveal-right.revealed{transform:none}
+
+/* ---------- Topbar ---------- */
+#topbar{background:var(--ink);font-size:14px;padding:9px 0;color:rgba(255,255,255,.72);position:relative;z-index:10}
+#topbar .wrap{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+#topbar a{color:rgba(255,255,255,.72);transition:.3s}
+#topbar a:hover{color:#fff}
+#topbar .info{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+#topbar i{color:var(--red-2);margin-right:6px}
+#topbar .social{display:flex;gap:6px}
+#topbar .social a{width:30px;height:30px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.08)}
+#topbar .social a:hover{background:var(--red)}
+
+/* ---------- Header ---------- */
+#header{position:sticky;top:0;z-index:1000;background:rgba(16,16,20,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06);transition:background .4s,box-shadow .4s}
+#header.scrolled{background:rgba(12,12,15,.96);box-shadow:0 10px 40px rgba(0,0,0,.35)}
+#header .wrap{max-width:1200px;margin:0 auto;padding:0 20px;height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:12px;color:#fff}
+.logo-mark{width:42px;height:42px;border-radius:12px;background:var(--grad);display:grid;place-items:center;font-family:"Raleway";font-weight:900;font-size:18px;color:#fff;letter-spacing:1px;box-shadow:0 8px 24px rgba(204,22,22,.4)}
+.logo-text{font-family:"Raleway";font-weight:800;font-size:19px;letter-spacing:2.5px;text-transform:uppercase;line-height:1}
+.logo-text small{display:block;font-size:9.5px;letter-spacing:3.5px;color:rgba(255,255,255,.5);font-weight:600;margin-top:3px}
+nav ul{display:flex;list-style:none;gap:4px;align-items:center}
+nav a{color:#fff;font-size:14px;font-weight:600;padding:10px 16px;border-radius:10px;position:relative;transition:.3s}
+nav a::after{content:"";position:absolute;left:16px;right:16px;bottom:6px;height:2px;background:var(--red-2);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+nav a:hover,nav a.active{color:#fff;background:rgba(204,22,22,.18)}
+nav a:hover::after,nav a.active::after{transform:scaleX(1)}
+.nav-cta{background:var(--red)!important;border-radius:999px!important;padding:10px 22px!important;box-shadow:0 8px 24px rgba(204,22,22,.35)}
+.nav-cta::after{display:none}
+.nav-cta:hover{background:var(--red-2)!important;transform:translateY(-1px)}
+#burger{display:none;background:none;border:0;color:#fff;font-size:26px;cursor:pointer}
+
+/* ---------- Hero ---------- */
+#hero{position:relative;min-height:calc(100vh - 110px);display:flex;align-items:center;color:#fff;overflow:hidden}
+#hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.05)}
+#hero .veil{position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,8,12,.92) 0%,rgba(10,8,12,.62) 45%,rgba(122,13,46,.35) 100%)}
+#hero .wrap{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:80px 20px;width:100%}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);backdrop-filter:blur(8px);font-size:12.5px;letter-spacing:2.5px;text-transform:uppercase;font-weight:700;margin-bottom:26px}
+.eyebrow .dot{width:8px;height:8px;border-radius:50%;background:#22e07a;box-shadow:0 0 0 0 rgba(34,224,122,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(34,224,122,0)}100%{box-shadow:0 0 0 0 rgba(34,224,122,0)}}
+#hero h1{font-size:clamp(40px,6.4vw,74px);font-weight:900;line-height:1.02;text-transform:uppercase;letter-spacing:1px;margin-bottom:22px}
+#hero h1 .grad{background:linear-gradient(90deg,#ff5c5c,#ffb3b3);-webkit-background-clip:text;background-clip:text;color:transparent}
+#hero h2{font-size:clamp(17px,2vw,22px);color:rgba(255,255,255,.85);font-weight:400;max-width:640px;margin-bottom:30px;line-height:1.6}
+.hero-list{list-style:none;margin-bottom:38px;display:flex;flex-direction:column;gap:12px}
+.hero-list li{display:flex;align-items:center;gap:12px;font-size:16.5px;color:#fff}
+.hero-list i{color:#ff6b6b;font-size:20px}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:"Raleway";font-weight:700;font-size:14.5px;letter-spacing:.6px;text-transform:uppercase;padding:16px 32px;border-radius:999px;transition:.35s;border:2px solid transparent;cursor:pointer}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 14px 34px rgba(204,22,22,.45)}
+.btn-red:hover{background:var(--red-2);transform:translateY(-3px);box-shadow:0 20px 44px rgba(204,22,22,.55)}
+.btn-ghost{border-color:rgba(255,255,255,.5);color:#fff;background:rgba(255,255,255,.06);backdrop-filter:blur(6px)}
+.btn-ghost:hover{background:#fff;color:var(--ink);transform:translateY(-3px)}
+.hero-badges{display:flex;gap:14px;margin-top:44px;flex-wrap:wrap}
+.badge{display:flex;align-items:center;gap:10px;padding:12px 18px;border-radius:14px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(8px);font-size:13px;font-weight:600}
+.badge i{color:#ff8a8a;font-size:20px}
+.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:2;color:rgba(255,255,255,.7);font-size:11px;letter-spacing:3px;text-transform:uppercase;text-align:center}
+.scroll-hint span{display:block;width:1px;height:44px;margin:10px auto 0;background:linear-gradient(#fff,transparent);animation:drip 1.8s infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ---------- Sections ---------- */
+section{padding:96px 0}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.section-tag{display:inline-block;padding:7px 16px;border-radius:999px;background:var(--red-soft);color:var(--red);font-size:12px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:16px}
+.section-title{font-size:clamp(28px,3.6vw,42px);font-weight:800;text-transform:uppercase;color:var(--ink);margin-bottom:16px;line-height:1.1}
+.section-sub{color:#777;max-width:640px;font-size:16px;line-height:1.7}
+
+/* ---------- Counters ---------- */
+#stats{background:var(--ink);position:relative;overflow:hidden;padding:0}
+#stats::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 340px at 15% 20%,rgba(204,22,22,.28),transparent 65%),radial-gradient(700px 340px at 85% 80%,rgba(122,13,46,.3),transparent 65%)}
+.stats-grid{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.07)}
+.stat{background:rgba(16,16,20,.4);backdrop-filter:blur(6px);padding:56px 24px;text-align:center;transition:.4s}
+.stat:hover{background:rgba(204,22,22,.14)}
+.stat .icon{font-size:30px;color:var(--red-2);margin-bottom:14px}
+.stat .num{font-family:"Raleway";font-size:clamp(38px,4.6vw,58px);font-weight:900;color:#fff;line-height:1;display:flex;justify-content:center;align-items:baseline}
+.stat .num em{font-style:normal;color:var(--red-2);margin-left:2px}
+.stat .lbl{margin-top:12px;color:rgba(255,255,255,.62);font-size:13.5px;letter-spacing:1.4px;text-transform:uppercase;font-weight:700}
+.stats-head{text-align:center;padding:70px 20px 10px;position:relative}
+.stats-head h2{color:#fff}
+.stats-head p{color:rgba(255,255,255,.6);margin-top:10px}
+
+/* ---------- Product / Vibrator rows ---------- */
+.row-flex{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.media-card{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.media-card img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.media-card:hover img{transform:scale(1.05)}
+.media-card .tag{position:absolute;top:16px;left:16px;background:var(--red);color:#fff;font-size:11.5px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:7px 14px;border-radius:999px;z-index:2}
+.feat-list{list-style:none;margin:26px 0;display:grid;gap:12px}
+.feat-list li{display:flex;gap:12px;align-items:flex-start;color:#555;font-size:15.5px;line-height:1.55}
+.feat-list i{color:var(--red);font-size:20px;margin-top:1px;flex-shrink:0}
+.video-embed{margin-top:18px;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:16/9}
+.video-embed iframe{width:100%;height:100%;border:0}
+
+/* ---------- Clients strip ---------- */
+#clients{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:64px 0}
+.marquee{overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.marquee-track{display:flex;gap:60px;width:max-content;animation:slide 26s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+@keyframes slide{to{transform:translateX(-50%)}}
+.client-chip{display:flex;align-items:center;gap:12px;font-family:"Raleway";font-weight:700;font-size:17px;color:#9a9aa2;white-space:nowrap;transition:.3s}
+.client-chip:hover{color:var(--ink)}
+.client-chip i{color:var(--red);font-size:20px}
+
+/* ---------- Testimonials ---------- */
+.t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:52px}
+.t-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px;box-shadow:0 8px 30px rgba(16,16,20,.05);transition:.4s;position:relative}
+.t-card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+.t-card .stars{color:#f5a623;margin-bottom:16px;letter-spacing:2px}
+.t-card p{color:#555;font-size:15px;line-height:1.7;font-style:italic;margin-bottom:22px}
+.t-card .who{display:flex;align-items:center;gap:14px}
+.t-card .avatar{width:46px;height:46px;border-radius:50%;background:var(--grad);color:#fff;display:grid;place-items:center;font-family:"Raleway";font-weight:800}
+.t-card .who b{display:block;font-family:"Raleway";font-size:15px;color:var(--ink)}
+.t-card .who span{font-size:12.5px;color:#888}
+
+/* ---------- Pricing ---------- */
+#pricing{background:var(--paper)}
+.p-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:26px;margin-top:52px}
+.p-card{background:#fff;border-radius:var(--radius);padding:34px 28px;border:1px solid var(--line);position:relative;overflow:hidden;transition:.4s;display:flex;flex-direction:column}
+.p-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform .5s}
+.p-card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+.p-card:hover::before{transform:scaleX(1)}
+.p-card.hot{background:var(--ink);color:#fff;border-color:var(--ink)}
+.p-card.hot h3{color:#fff}
+.p-card .cat{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--red);margin-bottom:12px}
+.p-card h3{font-size:17px;font-weight:700;color:var(--ink);line-height:1.45;min-height:50px}
+.p-card .price{font-family:"Raleway";font-size:44px;font-weight:900;color:var(--red);margin:16px 0 24px}
+.p-card .price sup{font-size:20px;top:-16px;position:relative}
+.p-card .btn-buy{margin-top:auto;display:block;text-align:center;background:var(--red);color:#fff;font-family:"Raleway";font-weight:700;font-size:13.5px;letter-spacing:1px;text-transform:uppercase;padding:14px;border-radius:12px;transition:.3s;cursor:pointer}
+.p-card .btn-buy:hover{background:var(--red-2);box-shadow:0 12px 28px rgba(204,22,22,.4)}
+.p-card.featured{outline:2px solid var(--red);box-shadow:0 18px 50px rgba(204,22,22,.22)}
+.p-card.featured .btn-buy{background:#fff;color:var(--red)}
+.software-note{margin-top:34px;text-align:center;color:#888;font-size:13.5px}
+
+/* ---------- Contact ---------- */
+.c-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:30px;margin-top:52px}
+.info-stack{display:grid;gap:20px;align-content:start}
+.info-box{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:flex;gap:18px;align-items:center;transition:.35s}
+.info-box:hover{transform:translateX(6px);box-shadow:var(--shadow)}
+.info-box i{font-size:26px;color:var(--red);width:56px;height:56px;border-radius:16px;background:var(--red-soft);display:grid;place-items:center;flex-shrink:0}
+.info-box b{font-family:"Raleway";display:block;color:var(--ink);margin-bottom:4px}
+.info-box span{color:#777;font-size:14.5px}
+.map-card{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);height:220px}
+.map-card iframe{width:100%;height:100%;border:0}
+form#contact-form{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:36px;box-shadow:var(--shadow);transition:box-shadow .3s}
+.f-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+form input,form textarea{width:100%;border:1.5px solid #e4e4e8;border-radius:12px;padding:14px 16px;font-size:15px;font-family:inherit;transition:.3s;background:#fbfbfd;color:#333}
+form input:focus,form textarea:focus{outline:none;border-color:var(--red);background:#fff;box-shadow:0 0 0 4px var(--red-soft)}
+form textarea{resize:vertical;min-height:130px}
+.contact-field-invalid{border:2px solid var(--red)!important;box-shadow:0 0 6px rgba(204,22,22,.35)!important}
+.contact-form-invalid{animation:blink .8s ease-in-out infinite}
+@keyframes blink{0%,100%{box-shadow:0 0 0 3px rgba(204,22,22,.25)}50%{box-shadow:0 0 0 3px rgba(204,22,22,.9)}}
+#send-btn{width:100%;margin-top:6px;border:0;font-size:15px}
+.form-status{margin-top:14px;text-align:center;font-size:14.5px;font-weight:600;display:none;padding:13px;border-radius:12px}
+.form-status.ok{display:block;background:#e5f9ee;color:#0e8a4d}
+.form-status.err{display:block;background:#fdeaea;color:var(--red)}
+
+/* ---------- Footer ---------- */
+footer{background:#0c0c0c;color:#fff;padding:70px 0 0}
+.f-grid4{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:44px}
+footer h4{font-family:"Raleway";font-size:16px;margin-bottom:20px;position:relative;padding-bottom:12px}
+footer h4::after{content:"";position:absolute;left:0;bottom:0;width:36px;height:3px;background:var(--red);border-radius:2px}
+footer p,footer a{color:rgba(255,255,255,.62);font-size:14.5px;line-height:1.8}
+footer a:hover{color:#fff}
+footer ul{list-style:none;display:grid;gap:10px}
+footer .logo{margin-bottom:18px}
+footer .social{display:flex;gap:10px;margin-top:18px}
+footer .social a{width:38px;height:38px;border-radius:50%;background:#262626;display:grid;place-items:center;color:#fff;transition:.3s}
+footer .social a:hover{background:var(--red);transform:translateY(-3px)}
+.copyright{border-top:1px solid #262626;margin-top:56px;padding:24px 0;text-align:center;font-size:13.5px;color:rgba(255,255,255,.45)}
+
+/* ---------- Back to top ---------- */
+#toTop{position:fixed;right:22px;bottom:22px;width:48px;height:48px;border-radius:14px;background:var(--red);color:#fff;border:0;font-size:22px;cursor:pointer;display:grid;place-items:center;opacity:0;visibility:hidden;transform:translateY(14px);transition:.4s;z-index:900;box-shadow:0 12px 30px rgba(204,22,22,.45)}
+#toTop.show{opacity:1;visibility:visible;transform:none}
+#toTop:hover{background:var(--red-2)}
+
+/* ---------- Logo image ---------- */
+.logo-img{height:46px;width:auto;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+.eyebrow img{width:20px;height:20px;border-radius:50%}
+.badge img{width:22px;height:22px;border-radius:50%;box-shadow:0 0 0 2px rgba(255,255,255,.35)}
+
+/* ---------- Services grid ---------- */
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:52px}
+.svc-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;transition:.4s}
+.svc-card:hover{transform:translateY(-8px);box-shadow:var(--shadow);border-color:rgba(204,22,22,.35)}
+.svc-card i{font-size:26px;color:var(--red);width:56px;height:56px;border-radius:16px;background:var(--red-soft);display:grid;place-items:center;margin-bottom:18px}
+.svc-card h3{font-size:16px;color:var(--ink);margin-bottom:10px}
+.svc-card p{font-size:14px;color:#777;line-height:1.65}
+
+/* ---------- News ---------- */
+.news-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:52px}
+.news-card{background:#fff;border:1px solid var(--line);border-left:4px solid var(--red);border-radius:var(--radius);padding:32px;transition:.35s}
+.news-card:hover{box-shadow:var(--shadow);transform:translateY(-6px)}
+.news-card .date{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--red);background:var(--red-soft);padding:6px 14px;border-radius:999px;margin-bottom:14px}
+.news-card h3{font-size:18px;color:var(--ink);margin-bottom:12px}
+.news-card p{font-size:14px;color:#666;line-height:1.7;margin-bottom:16px}
+.news-card a{font-weight:700;font-size:14px}
+
+/* ---------- Responsive ---------- */
+@media(max-width:980px){
+  .row-flex{grid-template-columns:1fr;gap:40px}
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .news-grid{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .t-grid{grid-template-columns:1fr}
+  .c-grid{grid-template-columns:1fr}
+  .f-grid4{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){.svc-grid{grid-template-columns:1fr}}
+@media(max-width:760px){
+  nav ul{position:fixed;inset:72px 0 auto 0;background:rgba(12,12,15,.98);flex-direction:column;align-items:stretch;padding:22px;gap:6px;transform:translateY(-130%);transition:transform .45s cubic-bezier(.22,.61,.36,1);border-bottom:1px solid rgba(255,255,255,.08)}
+  nav ul.open{transform:none}
+  nav a{display:block;padding:14px 16px}
+  #burger{display:block}
+  section{padding:70px 0}
+  .f-grid{grid-template-columns:1fr}
+  .f-grid4{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<div id="progress"></div>
+
+<!-- Topbar -->
+<div id="topbar">
+  <div class="wrap">
+    <div class="info">
+      <a href="mailto:pz.ibm@abv.bg"><i class="bi bi-envelope-fill"></i>pz.ibm@abv.bg</a>
+      <a href="tel:+359885629652"><i class="bi bi-telephone-fill"></i>+359 885 629 652</a>
+      <span><i class="bi bi-geo-alt-fill"></i>Sofia, Bulgaria — EU</span>
+    </div>
+    <div class="social">
+      <a href="https://www.facebook.com/sorsconstruction" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+      <a href="mailto:pz.ibm@abv.bg" aria-label="Email"><i class="bi bi-envelope"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header id="header">
+  <div class="wrap">
+    <a href="#hero" class="logo scrollto">
+      <img src="assets/img/logo-small.png" alt="Sors" class="logo-img" onerror="this.style.display='none'">
+      <span class="logo-text">SORS<small>CONSTRUCTION</small></span>
+    </a>
+    <nav id="navbar">
+      <ul id="navlist">
+        <li><a href="#hero" class="nav-link scrollto active">Home</a></li>
+        <li><a href="#marketplace" class="nav-link scrollto">Marketplace</a></li>
+        <li><a href="#hotel" class="nav-link scrollto">Hotel RS</a></li>
+        <li><a href="#door" class="nav-link scrollto">Smart Lock R1</a></li>
+        <li><a href="#vibrator" class="nav-link scrollto">Vibrator</a></li>
+        <li><a href="#services" class="nav-link scrollto">Services</a></li>
+        <li><a href="#news" class="nav-link scrollto">News</a></li>
+        <li><a href="#contact" class="nav-link scrollto">Contact</a></li>
+        <li><a href="#pricing" class="nav-link scrollto nav-cta">Order Now</a></li>
+      </ul>
+    </nav>
+    <button id="burger" aria-label="Menu"><i class="bi bi-list"></i></button>
+  </div>
+</header>
+
+<!-- Hero -->
+<section id="hero">
+  <video autoplay muted loop playsinline poster="assets/img/hero-bg.jpg">
+    <source src="sors.mp4" type="video/mp4">
+  </video>
+  <div class="veil"></div>
+  <div class="wrap">
+    <div class="eyebrow reveal"><img src="assets/img/eu.png" alt="Made in EU"><span class="dot"></span>European Manufacturer · Made in EU</div>
+    <h1 class="reveal">Sors <span class="grad">Construction</span></h1>
+    <h2 class="reveal">Precision manufacture of HVAC vibration isolators and the Sors R1 Smart Door Lock — engineered, built and supported in the European Union.</h2>
+    <ul class="hero-list">
+      <li class="reveal"><i class="bi bi-check-circle-fill"></i>Vibration Isolators for HVAC Mechanical Equipment</li>
+      <li class="reveal"><i class="bi bi-check-circle-fill"></i>Sors R1 Smart Door Lock — Hidden Installation, Bluetooth & Web Control</li>
+    </ul>
+    <div class="hero-actions reveal">
+      <a href="#pricing" class="btn btn-red scrollto"><i class="bi bi-cart3"></i>Order Now</a>
+      <a href="#vibrator" class="btn btn-ghost scrollto"><i class="bi bi-arrow-down-circle"></i>Explore Products</a>
+    </div>
+    <div class="hero-badges reveal">
+      <div class="badge"><i class="bi bi-shield-check"></i>2-Year Warranty</div>
+      <div class="badge"><i class="bi bi-cpu"></i>No China Software — EU Firmware</div>
+      <div class="badge"><i class="bi bi-headset"></i>Free Online Support</div>
+      <div class="badge"><img src="assets/img/eu.png" alt="Made in EU">Made in EU</div>
+    </div>
+  </div>
+  <div class="scroll-hint">Scroll<span></span></div>
+</section>
+
+<!-- Animated Counters -->
+<section id="stats">
+  <div class="stats-head reveal">
+    <span class="section-tag" style="background:rgba(204,22,22,.2);color:#ff8a8a">Proven at Scale</span>
+    <h2 class="section-title" style="color:#fff">Trusted by Businesses Worldwide</h2>
+    <p>Numbers that reflect two decades of industrial reliability.</p>
+  </div>
+  <div class="stats-grid">
+    <div class="stat reveal"><div class="icon"><i class="bi bi-box-seam"></i></div><div class="num"><span class="counter" data-target="12400">0</span><em>+</em></div><div class="lbl">Isolators Delivered</div></div>
+    <div class="stat reveal"><div class="icon"><i class="bi bi-briefcase"></i></div><div class="num"><span class="counter" data-target="850">0</span><em>+</em></div><div class="lbl">Business Clients</div></div>
+    <div class="stat reveal"><div class="icon"><i class="bi bi-globe2"></i></div><div class="num"><span class="counter" data-target="40">0</span><em>+</em></div><div class="lbl">Countries Served</div></div>
+    <div class="stat reveal"><div class="icon"><i class="bi bi-award"></i></div><div class="num"><span class="counter" data-target="25">0</span><em>+</em></div><div class="lbl">Years Engineering</div></div>
+  </div>
+</section>
+
+<!-- Vibration Isolation -->
+<section id="vibrator">
+  <div class="wrap row-flex">
+    <div class="reveal reveal-left">
+      <div class="media-card">
+        <span class="tag">Flagship Product</span>
+        <img src="assets/img/vb.png" alt="Sors HVAC vibration isolator" onerror="this.style.display='none';this.parentElement.style.minHeight='340px';this.parentElement.style.background='linear-gradient(135deg,#cc1616,#2a0a14)'">
+      </div>
+    </div>
+    <div class="reveal reveal-right">
+      <span class="section-tag">HVAC Engineering</span>
+      <h2 class="section-title">Vibration Isolation, Perfected</h2>
+      <p class="section-sub">Vibration isolation is the process of isolating vibrating parts from the rest of a machine so vibration and noise never propagate through your building structure. In HVAC systems this control is critical — and it is where Sors excels.</p>
+      <ul class="feat-list">
+        <li><i class="bi bi-check-circle-fill"></i>Prevents vibration transmission from fans, compressors and chillers.</li>
+        <li><i class="bi bi-check-circle-fill"></i>Keeps vibration energy from entering structures and adjacent equipment.</li>
+        <li><i class="bi bi-check-circle-fill"></i>Dissipates vibration energy before it becomes costly noise and wear.</li>
+        <li><i class="bi bi-check-circle-fill"></i>€20 per unit — direct from the manufacturer, no middlemen.</li>
+      </ul>
+      <a data-id="16" class="btn btn-red btn-buy"><i class="bi bi-cart3"></i>Order Isolators — €20</a>
+    </div>
+  </div>
+</section>
+
+<!-- Smart Door Lock -->
+<section id="door" style="background:var(--paper)">
+  <div class="wrap row-flex">
+    <div class="reveal reveal-left" style="order:2">
+      <span class="section-tag">Smart Security</span>
+      <h2 class="section-title">Sors Smart Door Lock R1</h2>
+      <p class="section-sub"><strong>Hidden strength, intelligent protection.</strong> Simple and concealed installation with Bluetooth control — designed and manufactured in the EU with encrypted security and no third-party firmware.</p>
+      <ul class="feat-list">
+        <li><i class="bi bi-check-circle-fill"></i><span><strong>Unbreakable construction</strong> — passed 500+ professional intrusion tests with zero success.</span></li>
+        <li><i class="bi bi-check-circle-fill"></i><span><strong>Concealed installation</strong> — seamlessly embedded inside your door, out of sight and unreachable.</span></li>
+        <li><i class="bi bi-check-circle-fill"></i><span><strong>Smartphone app control</strong> — lock/unlock remotely via secure Bluetooth on iOS &amp; Android.</span></li>
+        <li><i class="bi bi-check-circle-fill"></i><span><strong>Online dashboard</strong> — multi-user access, permission settings, entry history with timestamps, alerts.</span></li>
+        <li><i class="bi bi-check-circle-fill"></i><span><strong>Dual power supply</strong> — standard grid connection plus emergency rechargeable battery backup.</span></li>
+      </ul>
+      <p style="font-size:13.5px;color:#888;margin-bottom:22px">📦 Package: Sors controller box · Sors door bolt · Android/iOS app · 12V DC power adapter. Batteries not included — cable connection ready. Professional installation by certified technicians available for an extra fee. <strong style="color:var(--red)">Before ordering, call us</strong> to verify your door size, lock bolt type and power adapter layout.</p>
+      <a data-id="17" class="btn btn-red btn-buy"><i class="bi bi-cart3"></i>Order the R1 — €250</a>
+      <div class="video-embed reveal">
+        <iframe src="https://www.youtube.com/embed/9O14UjubXt4" title="Sors Smart Door Lock R1" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+    <div class="reveal reveal-right" style="order:1">
+      <div class="media-card">
+        <span class="tag">Best Seller</span>
+        <img src="assets/img/door-lock.jpg" alt="Sors R1 smart door lock" onerror="this.style.display='none';this.parentElement.style.minHeight='420px';this.parentElement.style.background='linear-gradient(135deg,#7a0d2e,#2a0a14)'">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Marketplace POS — main product -->
+<section id="marketplace" style="background:var(--paper)">
+  <div class="wrap row-flex">
+    <div class="reveal reveal-left">
+      <div class="media-card">
+        <span class="tag">Main Product · Retail POS</span>
+        <img src="assets/img/marketplace.jpg" alt="Sors Marketplace — Retail POS software" onerror="this.style.display='none';this.parentElement.style.minHeight='360px';this.parentElement.style.background='linear-gradient(135deg,#cc1616,#2a0a14)'">
+      </div>
+    </div>
+    <div class="reveal reveal-right">
+      <span class="section-tag">Sors Marketplace</span>
+      <h2 class="section-title">Retail POS Platform</h2>
+      <p class="section-sub">A fully integrated POS system that automates the entire workflow of your business — sales, reporting, control and merchandise management. From small shops to large supermarkets, pharmacies and warehouses — always at an affordable price with constant service.</p>
+      <ul class="feat-list">
+        <li><i class="bi bi-check-circle-fill"></i><span><strong>Seamless integration</strong> — connect with your existing systems and streamline operations.</span></li>
+        <li><i class="bi bi-check-circle-fill"></i><span><strong>Inventory management</strong> — real-time tracking and stock-level control.</span></li>
+        <li><i class="bi bi-check-circle-fill"></i><span><strong>Customer insights</strong> — gather and analyze data to sharpen your marketing.</span></li>
+        <li><i class="bi bi-check-circle-fill"></i><span><strong>Secure transactions</strong> — robust protection for sensitive information.</span></li>
+        <li><i class="bi bi-check-circle-fill"></i><span><strong>Multi-device</strong> — run your POS on desktop, tablet or terminal.</span></li>
+      </ul>
+      <a data-id="1" class="btn btn-red btn-buy"><i class="bi bi-cart3"></i>Order Marketplace — €500</a>
+    </div>
+  </div>
+</section>
+
+<!-- Hotel RS -->
+<section id="hotel">
+  <div class="wrap row-flex">
+    <div class="reveal reveal-left" style="order:2">
+      <span class="section-tag">Hospitality Software</span>
+      <h2 class="section-title">Hotel RS — Alfa Enterprise</h2>
+      <p class="section-sub">Ultimate hotel management software, on the market since 2011. Oversee single or multiple properties from one platform — from reservation to payment.</p>
+      <ul class="feat-list">
+        <li><i class="bi bi-check-circle-fill"></i><span><strong>Reservation system</strong> — simplified booking with real-time availability.</span></li>
+        <li><i class="bi bi-check-circle-fill"></i><span><strong>Web &amp; desktop reception</strong> — seamless check-in / check-out from any device.</span></li>
+        <li><i class="bi bi-check-circle-fill"></i><span><strong>Room management</strong> — intuitive layouts, assignments and housekeeping schedules.</span></li>
+        <li><i class="bi bi-check-circle-fill"></i><span><strong>Financial module</strong> — comprehensive tracking, reporting and fiscal POS printer integration.</span></li>
+        <li><i class="bi bi-check-circle-fill"></i><span><strong>Notifications &amp; authorization</strong> — automated alerts with secure access controls and audit trails.</span></li>
+      </ul>
+      <a data-id="2" class="btn btn-red btn-buy"><i class="bi bi-cart3"></i>Order Hotel RS — €600</a>
+    </div>
+    <div class="reveal reveal-right" style="order:1">
+      <div class="media-card">
+        <span class="tag">Since 2011</span>
+        <img src="assets/img/hotel.png" alt="Sors Hotel RS Alfa" onerror="this.style.display='none';this.parentElement.style.minHeight='380px';this.parentElement.style.background='linear-gradient(135deg,#7a0d2e,#2a0a14)'">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Clients marquee -->
+<section id="clients">
+  <div class="wrap reveal" style="text-align:center;margin-bottom:38px">
+    <span class="section-tag">Business References</span>
+    <p style="color:#9a9aa2;font-family:'Raleway';font-weight:700;letter-spacing:1px">OUR CLIENTS OPERATE IN</p>
+  </div>
+  <div class="marquee reveal">
+    <div class="marquee-track">
+      <span class="client-chip"><i class="bi bi-fan"></i>HVAC Contractors</span>
+      <span class="client-chip"><i class="bi bi-building"></i>Facility Management</span>
+      <span class="client-chip"><i class="bi bi-hospital"></i>Healthcare Buildings</span>
+      <span class="client-chip"><i class="bi bi-shop"></i>Retail Chains</span>
+      <span class="client-chip"><i class="bi bi-hotel-front"></i>Hotels &amp; Resorts</span>
+      <span class="client-chip"><i class="bi bi-factory"></i>Industrial Plants</span>
+      <span class="client-chip"><i class="bi bi-bank"></i>Corporate Offices</span>
+      <span class="client-chip"><i class="bi bi-airplane"></i>Airports &amp; Logistics</span>
+      <!-- duplicated for seamless loop -->
+      <span class="client-chip"><i class="bi bi-fan"></i>HVAC Contractors</span>
+      <span class="client-chip"><i class="bi bi-building"></i>Facility Management</span>
+      <span class="client-chip"><i class="bi bi-hospital"></i>Healthcare Buildings</span>
+      <span class="client-chip"><i class="bi bi-shop"></i>Retail Chains</span>
+      <span class="client-chip"><i class="bi bi-hotel-front"></i>Hotels &amp; Resorts</span>
+      <span class="client-chip"><i class="bi bi-factory"></i>Industrial Plants</span>
+      <span class="client-chip"><i class="bi bi-bank"></i>Corporate Offices</span>
+      <span class="client-chip"><i class="bi bi-airplane"></i>Airports &amp; Logistics</span>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section id="testimonials">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center">
+      <span class="section-tag">Client Stories</span>
+      <h2 class="section-title">Referenced by Professionals</h2>
+    </div>
+    <div class="t-grid">
+      <div class="t-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"We fitted Sors isolators across three office towers in Sofia. HVAC noise complaints dropped to zero within a week. Direct-from-manufacturer pricing made the decision easy."</p>
+        <div class="who"><div class="avatar">MK</div><div><b>M. Kovachev</b><span>Facility Director, Prime Facilities BG</span></div></div>
+      </div>
+      <div class="t-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"The R1 lock is invisible from outside and rock solid. Their engineers checked our door dimensions over a video call before shipping — real EU manufacturing support."</p>
+        <div class="who"><div class="avatar">DR</div><div><b>D. Ruseva</b><span>Owner, Boutique Hotel Group</span></div></div>
+      </div>
+      <div class="t-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"500+ intrusion tests claimed, and our security auditors agreed — nothing got through. The online dashboard with entry history is exactly what our chain needed."</p>
+        <div class="who"><div class="avatar">IP</div><div><b>I. Petrov</b><span>Security Consultant, Retail Chain</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center">
+      <span class="section-tag">What We Do</span>
+      <h2 class="section-title">IT Services &amp; Outsourcing</h2>
+      <p class="section-sub" style="margin:0 auto">Award-winning service for over 20 years — ready to solve your complex IT challenges so your business can function and grow.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card reveal"><i class="bi bi-lightbulb"></i><h3>IT Consulting</h3><p>Our team has been providing award-winning service for over 20 years and is ready to solve your complex IT challenges.</p></div>
+      <div class="svc-card reveal"><i class="bi bi-window"></i><h3>Web Design</h3><p>If your small or medium sized business needs a website, we can help — and much more than just web design.</p></div>
+      <div class="svc-card reveal"><i class="bi bi-code-slash"></i><h3>Software</h3><p>Fast development according to client requirements — web portals, desktop applications and mobile apps.</p></div>
+      <div class="svc-card reveal"><i class="bi bi-cloud"></i><h3>Cloud Systems &amp; Services</h3><p>Secure and reliable cloud solutions for data management and storage, built by requirements.</p></div>
+      <div class="svc-card reveal"><i class="bi bi-diagram-3"></i><h3>IT Consulting &amp; Outsourcing</h3><p>We optimize and manage your IT resources to enhance your efficiency.</p></div>
+      <div class="svc-card reveal"><i class="bi bi-gear"></i><h3>Custom Software Solutions</h3><p>Personalized software tailored precisely to your specific business needs.</p></div>
+      <div class="svc-card reveal"><i class="bi bi-globe"></i><h3>Internet Applications</h3><p>Powerful web applications that enhance your online presence and functionality.</p></div>
+      <div class="svc-card reveal"><i class="bi bi-robot"></i><h3>Business Process Automation</h3><p>Innovative automation solutions that increase your organization's efficiency and productivity.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center">
+      <span class="section-tag">Price List</span>
+      <h2 class="section-title">Transparent Pricing</h2>
+      <p class="section-sub" style="margin:0 auto">Click "Buy Now" on any product — the order form fills in automatically and scrolls to checkout. Fill your details and send.</p>
+    </div>
+    <div class="p-grid" id="p-grid">
+
+      <div class="p-card hot reveal">
+        <div class="cat">Hardware · Best Seller</div>
+        <h3>1 vibration isolator</h3>
+        <div class="price"><sup>€</sup>20</div>
+        <a data-id="16" class="btn-buy">Buy Now</a>
+      </div>
+
+      <div class="p-card hot reveal">
+        <div class="cat">Hardware · Best Seller</div>
+        <h3>1 Sors Smart Door Lock Bolt, Controller and mobile app</h3>
+        <div class="price"><sup>€</sup>250</div>
+        <a data-id="17" class="btn-buy">Buy Now</a>
+      </div>
+
+      <div class="p-card reveal">
+        <div class="cat">Software</div>
+        <h3>MARKETPLACE — RETAIL POS SOFTWARE VER. BG</h3>
+        <div class="price"><sup>€</sup>500</div>
+        <a data-id="1" class="btn-buy">Buy Now</a>
+      </div>
+
+      <div class="p-card reveal">
+        <div class="cat">Software</div>
+        <h3>HOTEL RS — ALFA ENTERPRISE SOLUTION</h3>
+        <div class="price"><sup>€</sup>600</div>
+        <a data-id="2" class="btn-buy">Buy Now</a>
+      </div>
+
+      <div class="p-card reveal">
+        <div class="cat">Software</div>
+        <h3>SORS VOIP IP USB PHONE 2011.V.1.0.3.24</h3>
+        <div class="price"><sup>€</sup>50</div>
+        <a data-id="3" class="btn-buy">Buy Now</a>
+      </div>
+
+      <div class="p-card reveal">
+        <div class="cat">Software</div>
+        <h3>SORS SCREEN MANAGER V.4</h3>
+        <div class="price"><sup>€</sup>2500</div>
+        <a data-id="4" class="btn-buy">Buy Now</a>
+      </div>
+
+      <div class="p-card reveal">
+        <div class="cat">Software</div>
+        <h3>SORS SCREEN MANAGER V.5</h3>
+        <div class="price"><sup>€</sup>2500</div>
+        <a data-id="5" class="btn-buy">Buy Now</a>
+      </div>
+
+      <div class="p-card reveal">
+        <div class="cat">Software</div>
+        <h3>SORS GATE</h3>
+        <div class="price"><sup>€</sup>0</div>
+        <a data-id="18" class="btn-buy">Buy Now</a>
+      </div>
+
+      <div class="p-card reveal">
+        <div class="cat">Software</div>
+        <h3>SORS LICENSE SERVER</h3>
+        <div class="price"><sup>€</sup>0</div>
+        <a data-id="6" class="btn-buy">Buy Now</a>
+      </div>
+
+      <div class="p-card reveal">
+        <div class="cat">Software</div>
+        <h3>SORS WORK SIMULATOR</h3>
+        <div class="price"><sup>€</sup>100</div>
+        <a data-id="7" class="btn-buy">Buy Now</a>
+      </div>
+
+      <div class="p-card reveal">
+        <div class="cat">AI Service</div>
+        <h3>SORS AI TRANSLATION</h3>
+        <div class="price"><sup>€</sup>10000</div>
+        <a data-id="8" class="btn-buy">Buy Now</a>
+      </div>
+
+      <div class="p-card reveal">
+        <div class="cat">Software</div>
+        <h3>SORS CALL</h3>
+        <div class="price"><sup>€</sup>0</div>
+        <a data-id="19" class="btn-buy">Buy Now</a>
+      </div>
+
+      <div class="p-card reveal">
+        <div class="cat">Library</div>
+        <h3>SORS MATH-R LIBRARY</h3>
+        <div class="price"><sup>€</sup>100</div>
+        <a data-id="9" class="btn-buy">Buy Now</a>
+      </div>
+
+      <div class="p-card reveal">
+        <div class="cat">Software</div>
+        <h3>SORS MONITORING CPU/GPU</h3>
+        <div class="price"><sup>€</sup>20</div>
+        <a data-id="10" class="btn-buy">Buy Now</a>
+      </div>
+
+      <div class="p-card reveal">
+        <div class="cat">AI Service</div>
+        <h3>SORS VIDEO SUBTITLES AND TRANSCRIPTION SERVICE</h3>
+        <div class="price"><sup>€</sup>5000</div>
+        <a data-id="11" class="btn-buy">Buy Now</a>
+      </div>
+
+      <div class="p-card reveal">
+        <div class="cat">Software</div>
+        <h3>SORS WAREHOUSE</h3>
+        <div class="price"><sup>€</sup>500</div>
+        <a data-id="12" class="btn-buy">Buy Now</a>
+      </div>
+
+      <div class="p-card reveal">
+        <div class="cat">Software</div>
+        <h3>SORS VIRTUAL PRINT</h3>
+        <div class="price"><sup>€</sup>50</div>
+        <a data-id="13" class="btn-buy">Buy Now</a>
+      </div>
+
+      <div class="p-card reveal">
+        <div class="cat">Software</div>
+        <h3>SORS KIOSK TABLE ORDERS</h3>
+        <div class="price"><sup>€</sup>500</div>
+        <a data-id="14" class="btn-buy">Buy Now</a>
+      </div>
+
+      <div class="p-card reveal">
+        <div class="cat">AI Service</div>
+        <h3>SORS CC ORCHESTRATOR (SUBTITLES FROM VIDEO)</h3>
+        <div class="price"><sup>€</sup>10</div>
+        <a data-id="15" class="btn-buy">Buy Now</a>
+      </div>
+
+    </div>
+    <p class="software-note reveal">All prices in EUR. For Android / iOS / web — additional subscription per year. Free updates for Android users. Rechargeable battery not covered by warranty.</p>
+  </div>
+</section>
+
+<!-- News -->
+<section id="news" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center">
+      <span class="section-tag">News &amp; Announcements</span>
+      <h2 class="section-title">Latest From Sors</h2>
+      <p class="section-sub" style="margin:0 auto">Important product announcements, end-of-support notices and releases.</p>
+    </div>
+    <div class="news-grid">
+      <div class="news-card reveal">
+        <span class="date">June 2024 · Product Notice</span>
+        <h3>Sors Remote Displays Manager — Version 4 End of Support</h3>
+        <p>As of December 31, 2024, Sors Remote Displays Manager ver. 4 is no longer supported — updates, patches and technical assistance have ended for this version. We encourage all users to upgrade to <strong>ver. 5</strong> to ensure continued support, improved security and compatibility with modern IT environments.</p>
+        <a href="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fsorsget%2Fposts%2Fpfbid023s9tuN5r4ujHj32ikPo3eeTkWnMZU8paWJXkWZsvRhzXvqbYz2YvuDQWJPVDu4xWl&show_text=true&width=500" target="_blank" rel="noopener">More info <i class="bi bi-arrow-right"></i></a>
+      </div>
+      <div class="news-card reveal">
+        <span class="date">June 2024 · Новини</span>
+        <h3>Sors Remote Displays Manager — Край на поддръжката на версия 4</h3>
+        <p>Към 31 декември 2024 г. Sors Remote Displays Manager версия 4 вече не се поддържа — актуализации, пачове и техническа помощ спират за тази версия. Потребителите могат да надградят до <strong>версия 5</strong>, която вече е налична с подобрени функции, сигурност и съвместимост.</p>
+        <a href="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fsorsget%2Fposts%2Fpfbid023s9tuN5r4ujHj32ikPo3eeTkWnMZU8paWJXkWZsvRhzXvqbYz2YvuDQWJPVDu4xWl&show_text=true&width=500" target="_blank" rel="noopener">Повече информация <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center">
+      <span class="section-tag">Get In Touch</span>
+      <h2 class="section-title">Contact Us — Sofia</h2>
+      <p class="section-sub" style="margin:0 auto">Questions, door measurements before ordering, or enterprise quotes — we reply fast.</p>
+    </div>
+    <div class="c-grid">
+      <div class="info-stack">
+        <div class="info-box reveal"><i class="bi bi-geo-alt"></i><div><b>Our Address</b><span>West Park, Sofia 535022, Bulgaria</span></div></div>
+        <div class="info-box reveal"><i class="bi bi-envelope"></i><div><b>Email Us</b><span>pz.ibm@abv.bg</span></div></div>
+        <div class="info-box reveal"><i class="bi bi-telephone"></i><div><b>Call Us</b><span>+359 885 629 652</span></div></div>
+        <div class="map-card reveal">
+          <iframe src="https://maps.google.com/maps?q=Sofia,%20West%20Park&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy" title="Sors Construction location"></iframe>
+        </div>
+      </div>
+      <form id="contact-form" class="reveal" novalidate>
+        <div class="f-grid">
+          <input type="text" name="name" id="name" placeholder="Your Name *" required>
+          <input type="email" name="email" id="email" placeholder="Your Email *" required>
+        </div>
+        <div style="height:16px"></div>
+        <input type="text" name="subject" id="subject" placeholder="Subject *" required>
+        <div style="height:16px"></div>
+        <textarea name="message" id="message" placeholder="Message / Order details *" required></textarea>
+        <div style="height:20px"></div>
+        <button type="submit" id="send-btn" class="btn btn-red"><i class="bi bi-send"></i>Send Message</button>
+        <div class="form-status" id="form-status"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="wrap f-grid4">
+    <div>
+      <a href="#hero" class="logo scrollto"><img src="assets/img/logo-small.png" alt="Sors" class="logo-img" onerror="this.style.display='none'"><span class="logo-text">SORS<small>CONSTRUCTION</small></span></a>
+      <p>Sofia, West Park 535022, BG<br>
+      <strong>Phone:</strong> +359 885 629 652<br>
+      <strong>Email:</strong> pz.ibm@abv.bg</p>
+      <div class="social">
+        <a href="https://www.facebook.com/sorsconstruction" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="mailto:pz.ibm@abv.bg" aria-label="Email"><i class="bi bi-envelope"></i></a>
+      </div>
+    </div>
+    <div>
+      <h4>Useful Links</h4>
+      <ul>
+        <li><a href="#hero" class="scrollto">Home</a></li>
+        <li><a href="#marketplace" class="scrollto">Marketplace POS</a></li>
+        <li><a href="#hotel" class="scrollto">Hotel RS</a></li>
+        <li><a href="#door" class="scrollto">Smart Lock R1</a></li>
+        <li><a href="#vibrator" class="scrollto">Vibrator</a></li>
+        <li><a href="#news" class="scrollto">News</a></li>
+        <li><a href="#contact" class="scrollto">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="#vibrator" class="scrollto">HVAC Isolator Manufacturing</a></li>
+        <li><a href="#door" class="scrollto">Smart Lock Engineering</a></li>
+        <li><a href="#pricing" class="scrollto">Enterprise Software</a></li>
+        <li><a href="#pricing" class="scrollto">AI Services</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Why Sors</h4>
+      <p>✔ Made in the European Union<br>✔ 2-year warranty with authorized installation<br>✔ Free online support &amp; updates<br>✔ No China software — no vulnerabilities</p>
+    </div>
+  </div>
+  <div class="copyright">© Copyright <strong>Sors GET</strong>. All Rights Reserved.</div>
+</footer>
+
+<button id="toTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+<script>
+/* ============================================================
+   SORS — Interaction layer (vanilla JS, no dependencies)
+   ============================================================ */
+(function () {
+  "use strict";
+
+  /* ---------- Scroll progress + header state + back-to-top ---------- */
+  var header = document.getElementById('header');
+  var toTop = document.getElementById('toTop');
+  var progress = document.getElementById('progress');
+  function onScroll() {
+    var y = window.scrollY;
+    header.classList.toggle('scrolled', y > 30);
+    toTop.classList.toggle('show', y > 500);
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.width = (h > 0 ? (y / h) * 100 : 0) + '%';
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  toTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+  /* ---------- Mobile menu ---------- */
+  var burger = document.getElementById('burger');
+  var navlist = document.getElementById('navlist');
+  burger.addEventListener('click', function () {
+    navlist.classList.toggle('open');
+    burger.querySelector('i').className = navlist.classList.contains('open') ? 'bi bi-x' : 'bi bi-list';
+  });
+
+  /* ---------- Smooth scroll for .scrollto links ---------- */
+  document.querySelectorAll('.scrollto').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var id = a.getAttribute('href');
+      if (id && id.charAt(0) === '#' && document.querySelector(id)) {
+        e.preventDefault();
+        navlist.classList.remove('open');
+        burger.querySelector('i').className = 'bi bi-list';
+        var top = document.querySelector(id).getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+    });
+  });
+
+  /* ---------- Reveal on scroll ---------- */
+  var revealObs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) { en.target.classList.add('revealed'); revealObs.unobserve(en.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function (el) { revealObs.observe(el); });
+
+  /* ---------- Animated counters (fire once, on scroll into view) ---------- */
+  function animateCounter(el) {
+    var target = parseInt(el.getAttribute('data-target'), 10);
+    var dur = 2200, start = null;
+    function step(ts) {
+      if (!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3); // easeOutCubic
+      el.textContent = Math.floor(eased * target).toLocaleString('en-US');
+      if (p < 1) requestAnimationFrame(step);
+      else el.textContent = target.toLocaleString('en-US');
+    }
+    requestAnimationFrame(step);
+  }
+  var countObs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) { animateCounter(en.target); countObs.unobserve(en.target); }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.counter').forEach(function (el) { countObs.observe(el); });
+
+  /* ---------- Active nav link highlighting ---------- */
+  var sections = ['hero', 'vibrator', 'door', 'marketplace', 'hotel', 'services', 'pricing', 'news', 'contact'];
+  var navLinks = document.querySelectorAll('#navlist a.nav-link');
+  window.addEventListener('scroll', function () {
+    var pos = window.scrollY + 160;
+    var current = 'hero';
+    sections.forEach(function (id) {
+      var s = document.getElementById(id);
+      if (s && s.offsetTop <= pos) current = id;
+    });
+    navLinks.forEach(function (l) {
+      l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+    });
+  }, { passive: true });
+
+  /* ---------- Order buttons: prefill form + scroll to contact ---------- */
+  document.querySelectorAll('.btn-buy').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      var id = btn.getAttribute('data-id');
+      var card = document.querySelector('#pricing .btn-buy[data-id="' + id + '"]')?.closest('.p-card');
+      
+      document.querySelectorAll('.p-card').forEach(function (c) { c.classList.remove('featured'); });
+      
+      var title = '';
+      var price = '0';
+      if (card) {
+        card.classList.add('featured');
+        title = card.querySelector('h3').textContent.trim();
+        price = card.querySelector('.price').textContent.trim();
+      } else {
+        title = btn.textContent.trim();
+      }
+
+      var msg = 'Order product: ' + title + ' (€' + price.replace('€', '').trim() + ') — Product ID: ' + id +
+        '\nQuantity: 1\nCompany/Personal Name: \nAddress: \nPhone: ';
+      document.getElementById('message').value = msg;
+
+      submitLog('', '', '', '', title + ' ID: ' + id, '');
+      var contact = document.getElementById('contact');
+      window.scrollTo({ top: contact.getBoundingClientRect().top + window.scrollY - 60, behavior: 'smooth' });
+      setTimeout(function () { document.getElementById('name').focus(); }, 700);
+    });
+  });
+
+  /* ---------- Form validation (mirrors original order.js logic) ---------- */
+  var form = document.getElementById('contact-form');
+  var status = document.getElementById('form-status');
+
+  function validateForm() {
+    var ok = true;
+    form.querySelectorAll('input[required], textarea[required]').forEach(function (f) {
+      f.classList.remove('contact-field-invalid');
+      if (!f.value.trim() || (f.type === 'email' && !f.checkValidity())) {
+        f.classList.add('contact-field-invalid');
+        ok = false;
+      }
+    });
+    form.classList.toggle('contact-form-invalid', !ok);
+    if (!ok) {
+      var firstBad = form.querySelector('.contact-field-invalid');
+      if (firstBad) firstBad.focus();
+    }
+    return ok;
+  }
+  form.addEventListener('input', function (e) {
+    if (e.target.value.trim() && e.target.checkValidity()) e.target.classList.remove('contact-field-invalid');
+    var stillBad = !!form.querySelector('.contact-field-invalid');
+    form.classList.toggle('contact-form-invalid', stillBad);
+  });
+
+  /* ---------- Submit: posts to the Sors endpoint ---------- */
+  function getUrlParameter(name) {
+    return new URLSearchParams(window.location.search).get(name);
+  }
+
+  function submitLog(name, company, companyAddress, email, subject, message) {
+    var payload = {
+      name: encodeURIComponent(name) + '. Company: ' + encodeURIComponent(company) +
+            ' Title: ' + encodeURIComponent(subject) + ' Message: ' + encodeURIComponent(message),
+      address: encodeURIComponent(companyAddress),
+      book_count: 0,
+      payment_type: '',
+      lang: encodeURIComponent(email),
+      ts: new Date().toISOString()
+    };
+    var rParam = getUrlParameter('r') || 'sorsconstruct.github.io';
+    var idParam = getUrlParameter('id');
+    var mParam = getUrlParameter('m') || 'Sors Construct Contact';
+    var url = 'https://www.karibi.somee.com/api/logging/log';
+    var qs = [];
+    if (rParam) qs.push('r=' + encodeURIComponent(rParam));
+    if (idParam) qs.push('id=' + encodeURIComponent(idParam));
+    if (mParam) qs.push('m=' + encodeURIComponent(mParam));
+    if (qs.length) url += '?' + qs.join('&');
+    return fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+  }
+
+  function logSave(message) {
+    try {
+      var rParam = getUrlParameter('r') || 'sorsconstruct.github.io';
+      var idParam = getUrlParameter('id');
+      var mParam = getUrlParameter('m') || message;
+      var url = 'https://www.karibi.somee.com/api/logging/log';
+      var qs = [];
+      if (rParam) qs.push('r=' + encodeURIComponent(rParam));
+      if (idParam) qs.push('id=' + encodeURIComponent(idParam));
+      if (mParam) qs.push('m=' + encodeURIComponent(mParam));
+      if (qs.length) url += '?' + qs.join('&');
+      fetch(url, { method: 'POST' }).catch(function (err) { console.error('LOG ERROR:', err); });
+    } catch (_) {}
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    status.className = 'form-status';
+    if (!validateForm()) return;
+
+    var name = document.getElementById('name').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var subject = document.getElementById('subject').value.trim();
+    var message = document.getElementById('message').value.trim();
+
+    submitLog(name, '', '', email, subject, message)
+      .then(function () {
+        status.textContent = 'Your message has been sent. Thank you!';
+        status.className = 'form-status ok';
+        form.reset();
+        form.classList.remove('contact-form-invalid');
+      })
+      .catch(function () {
+        window.location.href = 'mailto:pz.ibm@abv.bg?subject=' + encodeURIComponent(subject || 'Order Request') +
+          '&body=' + encodeURIComponent(message + '\n\n— ' + name + ' (' + email + ')');
+        status.textContent = 'Opening your email app as a fallback…';
+        status.className = 'form-status err';
+      });
+  });
+
+  logSave('Sors construct was load.');
+
+})();
+</script>
+
+</body>
+</html>
